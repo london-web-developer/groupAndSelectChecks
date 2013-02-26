@@ -1,0 +1,31 @@
+{
+    "name": "groupAndSelectChecks",
+    "title": "Group and select checkboxes using ctrl key.",
+    "description": "jQuery plugin for Grouping and selected checkboxes using the ctrl key",
+    "keywords": [
+        "checkboxes",
+        "grouping",
+        "selecting"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Matthew Barnden"
+    },
+    "maintainers": [
+        {
+            "name": "Matthew Barnden",
+            "email": "matt.barnden@gmail.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/london-web-developer/groupAndSelectChecks/MIT-LICENSE.md"
+        }
+    ],
+    "homepage": "https://github.com/london-web-developer/groupAndSelectChecks",
+    "docs": "https://github.com/london-web-developer/groupAndSelectChecks/README.md",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}
