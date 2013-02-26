@@ -1,5 +1,5 @@
 /*
- * jQuery Select all checkboxes
+ * jQuery Group and select checkboxes.
  *
  * Simplified BSD License (@see License)
  * @author Matthew Barnden
