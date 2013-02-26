@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Untitled Document</title>
+
+<script src="HTTP://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="groupSelectChecks.js"></script>
+
+<script type="text/javascript">
+$(function(){
+  $('ul').groupSelectChecks({siblingGroup:'li'});
+	$('table').groupSelectChecks({siblingGroup:'table tr'});
+	$('#list1').groupSelectChecks();
+	$('#list2').groupSelectChecks();
+});
+
+</script>
+
+</head>
+<body>
+	<h3>In a table</h3>
+	<table>
+		<tr>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox"/></td>
+		</tr>
+	</table>
+	<h3>In a list</h3>
+	<ul>
+		<li>
+			<input type="checkbox"/>
+		</li>
+		<li>
+			<input type="checkbox"/>
+		</li>
+		<li>
+			<input type="checkbox"/>
+		</li>
+		<li>
+			<input type="checkbox"/>
+		</li>
+		<li>
+			<input type="checkbox"/>
+		</li>
+	</ul>
+	<h3>Wrapped in a div no config</h3>
+	<div id="list1">
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+	</div>
+	<h3>Wrapped in a span no config</h3>
+	<span id="list2">
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+	</span>
+</body>
+
+</html>
