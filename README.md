@@ -8,15 +8,14 @@ key and selecting another checkbox you will select all between the two and inclu
 
 This simple plugin enables that feature for your online app.
 
-By default the plugin uses the shift key pressed for group selection but you can pass the keycode of your choice
-for the key you prefer, Just pass the code to the config like so:
+By default the plugin uses the shift key pressed for group selection but you can pass the keycode for the key 
+you prefer, Just pass the code to the config like so:
 
 ```
 $('ul').groupSelectChecks({keyCode:18});
-
 ```
 
-##### You do not have to follow a specific mark-up structure, it has a simple config which enables this flexibility.
+##### You do not have to follow a specific mark-up structure, it has another config option which enables this flexibility.
 
 If you have your checkboxes marked up in a unordered list say, you just need to pass the parent sibling element that
 provides the index. In this case it would be the li, so in the config all you would need to do is:
