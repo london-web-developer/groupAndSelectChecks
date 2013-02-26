@@ -2,16 +2,16 @@
  * jQuery Select all checkboxes
  *
  * Simplified BSD License (@see License)
- * @author        Matthew Barnden
- * @copyright     (c) 2013 Matthew Barnden
+ * @author Matthew Barnden
+ * @copyright(c) 2013 Matthew Barnden
  * Usage: $(elem).groupSelectChecks() (@see Readme.md)
- * @version 0.0.1
+ * @version 0.2.0
  */
  
 ;(function($){
   $.fn.groupSelectChecks = function(opts){
-
-  var opts = opts || {},
+  
+		var opts = opts || {},
 		savedCheckIndex = false,
 		selectThem = false,
 		slcdIndex,
@@ -20,14 +20,29 @@
 		selectedChecks,
 		settings = {
 			siblingGroup:null,
-			classHelper:'selected'
+			classHelper:'selected',
+			keyCode:16
 		};
 		
 		opts = $.extend(settings, opts);
 		
+		
+		
 		return this.each(function() {
 
-			var $this = $(this);
+			var $this = $(this),
+				keyPressed = false;
+		
+			$(window).keydown(function(evt) {
+  				if (evt.which == opts.keyCode) {
+    				keyPressed = true;
+  				}
+			}).keyup(function(evt) {
+  				if (evt.which == opts.keyCode) { 
+    				keyPressed = false;
+  				}
+			});
+			
 			$this.find('input:checkbox').click(function(e){
 			
 				if(opts.siblingGroup){
@@ -36,7 +51,7 @@
 				else {
 					slcdIndex = $(this).index();
 				}
-				if(e.ctrlKey){
+				if(keyPressed){
 					if(savedCheckIndex === slcdIndex  || savedCheckIndex === false){
 						savedCheckIndex = slcdIndex;
 						selectThem = $(this).is(':checked');
