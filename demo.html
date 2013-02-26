@@ -13,9 +13,9 @@
 
 <script type="text/javascript">
 $(function(){
-  $('ul').groupSelectChecks({siblingGroup:'li'});
+  	$('ul').groupSelectChecks({siblingGroup:'li', keyCode:18});
 	$('table').groupSelectChecks({siblingGroup:'table tr'});
-	$('#list1').groupSelectChecks();
+	$('#list1').groupSelectChecks({keyCode:18});
 	$('#list2').groupSelectChecks();
 });
 
@@ -41,7 +41,7 @@ $(function(){
 			<td><input type="checkbox"/></td>
 		</tr>
 	</table>
-	<h3>In a list</h3>
+	<h3>In a list, use alt key to select</h3>
 	<ul>
 		<li>
 			<input type="checkbox"/>
@@ -59,7 +59,7 @@ $(function(){
 			<input type="checkbox"/>
 		</li>
 	</ul>
-	<h3>Wrapped in a div no config</h3>
+	<h3>Wrapped in a div no config, alt key to select</h3>
 	<div id="list1">
 		<input type="checkbox"/>
 		<input type="checkbox"/>
