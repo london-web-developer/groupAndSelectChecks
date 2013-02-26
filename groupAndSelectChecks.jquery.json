@@ -1,13 +1,13 @@
 {
     "name": "groupAndSelectChecks",
-    "title": "Group and select checkboxes using ctrl key.",
-    "description": "jQuery plugin for Grouping and selected checkboxes using the ctrl key",
+    "title": "Group and select checkboxes.",
+    "description": "jQuery plugin for Grouping and selected checkboxes whilst pressing a key",
     "keywords": [
         "checkboxes",
         "grouping",
         "selecting"
     ],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": {
         "name": "Matthew Barnden"
     },
