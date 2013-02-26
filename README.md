@@ -3,7 +3,7 @@ group-select-checks
 
 ### Select / deselect a range of checkboxes - jQuery Plugin.
 
-A lot of applications (email apps spring to mind) allow you to select a checkbox then whilst holding down the ctrl
+A lot of applications (email apps spring to mind) allow you to select a checkbox then whilst holding down a
 key and selecting another checkbox you will select all between the two and including the two you selected.
 
 This simple plugin enables that feature for your online app.
