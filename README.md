@@ -27,11 +27,5 @@ $('ul').groupSelectChecks({keyCode:18, siblingGroup:'li'});
 You can remove this config option and just wrap a bunch of checkboxes in a container (div or span) to make life a little more
 simple if you wish, the demo.html should show all this more clearly.
 
-Finally there is a class that is used internally in the code. This by default is set as 'selected', if for any reason this
-conflicts with your code you can easily change this with the other config option, classHelper:
-```
-$('ul').groupSelectChecks({keyCode:18, siblingGroup:'li', classHelper:'yourclass'});
-```
-
 
 
