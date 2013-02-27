@@ -5,7 +5,7 @@
  * @author Matthew Barnden
  * @copyright(c) 2013 Matthew Barnden
  * Usage: $(elem).groupSelectChecks() (@see Readme.md)
- * @version 0.2.0
+ * @version 0.3.0
  */
  
 ;(function($){
@@ -20,13 +20,10 @@
 		selectedChecks,
 		settings = {
 			siblingGroup:null,
-			classHelper:'selected',
 			keyCode:16
 		};
 		
 		opts = $.extend(settings, opts);
-		
-		
 		
 		return this.each(function() {
 
@@ -57,22 +54,10 @@
 						selectThem = $(this).is(':checked');
 					}
 					else {
-						if(selectThem){
-							$(this).addClass(opts.classHelper);
-						}
-						else {
-							$(this).removeClass(opts.classHelper);
-						}
 						if(slcdIndex > savedCheckIndex){
 							for(loopInt = savedCheckIndex; loopInt < slcdIndex; loopInt++){
 								opts.siblingGroup ? $check = $($this.parents().find(opts.siblingGroup + " input:checkbox")[loopInt]) : $check = $($this.children('input')[loopInt]);
 								$check.attr('checked', selectThem);
-								if(selectThem){
-									$check.addClass(opts.classHelper);
-								}
-								else {
-									$check.removeClass(opts.classHelper);
-								}
 							}
 							savedCheckIndex = false;
 						}
@@ -80,12 +65,6 @@
 							for(loopInt = savedCheckIndex-1; loopInt >= slcdIndex; loopInt--){
 								opts.siblingGroup ? $check = $($this.parents().find(opts.siblingGroup + " input:checkbox")[loopInt]) : $check = $($this.children('input')[loopInt]);
 								$check.attr('checked', selectThem);
-								if(selectThem){
-									$check.addClass(opts.classHelper);
-								}
-								else {
-									$check.removeClass(opts.classHelper);
-								}
 							}
 							savedCheckIndex = false;
 						}
@@ -94,12 +73,6 @@
 				else {
 					savedCheckIndex = slcdIndex;
 					selectThem = $(this).is(':checked');
-					if(selectThem){
-						$(this).addClass(opts.classHelper);
-					}
-					else {
-						$(this).removeClass(opts.classHelper);
-					}
 				}
 			});
 		});
