@@ -27,5 +27,6 @@ $('ul').groupSelectChecks({keyCode:18, siblingGroup:'li'});
 You can remove this config option and just wrap a bunch of checkboxes in a container (div or span) to make life a little more
 simple if you wish, the demo.html should show all this more clearly.
 
+Thanks
 
 
